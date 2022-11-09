@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Serialization">
+    <listeners>
+        <listener class-name="Reports.Listeners"/>
+    </listeners>
+
+    <test name="01">
+        <classes>
+            <class name="Json.Brand"/>
+        </classes>
+    </test>
+
+    <test name="02">
+        <classes>
+            <class name="XML.Customer"/>
+        </classes>
+    </test>
+
+    <test name="03">
+        <classes>
+            <class name="XML.Phone"/>
+        </classes>
+    </test>
+
+    <test name="04">
+        <classes>
+            <class name="XML.BooksMain"/>
+        </classes>
+    </test>
+</suite>
