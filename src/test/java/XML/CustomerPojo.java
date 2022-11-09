@@ -12,7 +12,7 @@ public class CustomerPojo {
     @JsonProperty("Phone")
     private String phone;
     @JsonProperty("FullAddress")
-    private List<String> address = new ArrayList<>();
+    private CustomerAddressPojo address;
 
     public String getCompanyName() {
         return companyName;
@@ -37,10 +37,11 @@ public class CustomerPojo {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    public List<String> getAddress() {
-        return address;
-    }
-    public void setAddress(List<String> address) {
-        this.address = address;
+
+    public String getCustomerAddress() {
+        return address.getAddress() +
+                " City:" + address.getCity() +
+                " Zip Code:" + address.getZip() +
+                " Country:" + address.getCountry();
     }
 }
